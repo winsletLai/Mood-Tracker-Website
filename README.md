@@ -51,7 +51,7 @@ Place the project inside the `htdocs` directory of your XAMPP installation.
 
 Example:
 ```
-xampp/htdocs/mindcare-plus
+xampp/htdocs/Mood-Tracker-Website
 ```
 
 3. **Start XAMPP**
