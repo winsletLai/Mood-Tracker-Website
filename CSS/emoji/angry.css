@@ -1,0 +1,95 @@
+/*emoji animated style*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.emoji_angry{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#ffda6b, #d62f2f);
+    box-shadow: 0 0 20px rgba(255, 60, 60, 0.6);
+    animation: angryColor 3s linear infinite;
+}
+
+.face_angry{
+    height: 100%;
+    width: 100%;
+}
+
+.eyebrow_angry{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.eyebrow_angry span{
+    transform: rotate(0deg);
+    display: inline-block;
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+    border: 6px solid #b96a46;
+    position: relative;
+}
+
+.eyebrow_angry span:first-child{
+    transform: rotate(30deg);
+}
+
+.eyebrow_angry span:last-child{
+    transform: rotate(-30deg);
+}
+
+
+.eye_angry{
+    position: absolute;
+    top: 65px;
+    display: flex;
+    width: 100%;
+    height: 20px;
+    gap: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.eye_angry span{
+    display: inline-block;
+    height: 40px;
+    width: 30px;
+    margin: 0 22px;
+    border-radius: 50%;
+    background: #262c38;
+}
+
+
+.mouth_angry{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-radius: 0 0 60px 60px;
+    transform: translateX(-50%) rotate(180deg);
+    background-color: #d62f2f;
+}
+
+/*animation face_angry*/
+@keyframes angryColor {
+    0% {background: linear-gradient(#ffda6b, #d62f2f);}
+    50% {background: linear-gradient(#ffda6b 0%, #f67d4a 25%, #dc3939 100%);}
+    100% {background: linear-gradient(#ff6b6b, #991d1d);}
+}
+
+

@@ -1,0 +1,373 @@
+/*Home Page Style*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*b.*/
+body {
+    background-image: linear-gradient(180deg, #f2faff, #b6d8f4);
+    font-family: var(--FF);
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.btn {
+    background-color: var(--DARKCO);
+    color: whitesmoke;
+    border-radius: 30px;
+    border: none;
+    font-size: var(--FS);
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--BTNDARKCO);
+}
+
+
+.btnArea {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btnArea .btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnArea .btn:hover {
+    background-color: #555;
+}
+
+.btnDone {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/*c.*/
+.content {
+    background: linear-gradient(#f2faff, #d1e6fa);
+    text-align: center;
+    padding-top: 40px 20px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/*d*/
+.description p {
+    font-family: var(--FF);
+    color: #333;
+    font-size: 1.1em;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.date {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.divider {
+    width: 1px;
+    background-color: #999;
+    height: auto;
+}
+
+desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    max-width: 150px;
+}
+
+/*e.*/
+.emoji-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: scale(0.7);
+    transform-origin: top center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.emoji-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+.emoji-button:hover {
+    transform: scale(1.1);
+}
+
+/*h.*/
+.header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-family: var(--FF);
+    color: #030f3d;
+    margin: 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 24px;
+    background-color: #4b5d85;
+    padding: 8px 16px;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*i.*/
+.imgLogo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.imgEmoji {
+    padding: 20px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 6px;
+}
+
+/*l*/
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--BTNCO, rgba(255, 255, 255, 0.15));
+    /* fallback */
+    padding: 12px 16px;
+    border: none;
+    border-radius: 14px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    min-height: 60px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.list:hover {
+    background-color: #c2daf1;
+    transform: translateY(-2px);
+}
+
+.left_subbox {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 15px;
+    gap: 40px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s;
+}
+
+.left_subbox h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #04196f;
+    text-align: left;
+}
+
+.left_subbox .card-title {
+    font-size: 1.1em;
+    font-family: var(--FS-XL);
+    font-weight: bold;
+    margin: 10px 0 6px;
+    color: #04196f;
+}
+
+.left_subbox .list {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 16px 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    min-height: 130px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.left_subbox .list:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*s*/
+.selfcareBox1 {
+    width: 80%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    background-color: transparent;
+    max-height: 160px;
+    padding: 24px;
+    border: transparent;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.selfcareBox1 .list {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    background-color: white;
+    gap: 16px;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: var(--FS);
+    transition: background-color 0.2s;
+}
+
+.selfcareBox1 .list:hover {
+    background-color: #eaeaea;
+}
+
+.selfcareBox2 {
+    width: 260px;
+    background-color: transparent;
+    min-height: 240px;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.selfcareBox2 .list {
+    background-color: #4b5d85;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    min-height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.selfcareBox2 .list:hover {
+    background-color: #5f6e99;
+}
+
+.selfcareBox2 input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 10px;
+}
+
+.selfcareBox2 form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.selfcareContent {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.selfcareGrid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/*t.*/
+.txtTitle>p {
+    color: #333;
+    font-size: var(--FS);
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.textbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.textbox textarea {
+    width: 50%;
+    height: 10em;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    resize: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}

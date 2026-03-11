@@ -1,0 +1,49 @@
+body {
+    background-image: linear-gradient(180deg, #b6d8f4, #022135);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    margin: 20px 20px 30px;
+    border-collapse: collapse;
+    width: calc(100% - 50px);
+    background-color: #e5eaeeff;
+}
+
+th,
+td {
+    border: 1px solid #374d5cff;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #12183dff;
+    color: white;
+}
+
+a.button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #022135;
+    color: white;
+    text-decoration: none;
+}
+
+#Approve {
+    background: #2a7527ff;
+}
+
+#Decline {
+    background-color: #b30e0eff;
+}

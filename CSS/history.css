@@ -1,0 +1,219 @@
+/* Body & Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #f0faff, #b3daff);
+    color: #333;
+}
+
+/* Flex container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Calendar Card */
+.calendar {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    width: 60%;
+    min-width: 320px;
+}
+
+/* Month Heading and Arrows */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.calendar-header .month-label {
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-header .nav-arrow {
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #0d47a1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.calendar-header .nav-arrow:hover {
+    color: #1976d2;
+}
+
+.calendar h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #1565c0;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.calendar .nav-arrow {
+    text-decoration: none;
+    color: #0d47a1;
+    font-size: 1.8rem;
+    transition: color 0.3s;
+}
+
+.calendar .nav-arrow:hover {
+    color: #1976d2;
+}
+
+/* Calendar Table */
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.calendar th,
+.calendar td {
+    aspect-ratio: 1 / 1;
+    /* Makes cells square */
+    width: 14.28%;
+    /* 100% / 7 days */
+    max-width: 100px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    position: relative;
+}
+
+/* Center the day number */
+.calendar td a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+
+/* Optional: header row styling */
+.calendar th {
+    background-color: #e3f2fd;
+    font-weight: bold;
+    color: #0d47a1;
+    font-size: 1rem;
+}
+
+
+.calendar th {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    padding: 12px 0;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.calendar td {
+    height: 80px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1rem;
+    position: relative;
+    transition: background 0.2s;
+}
+
+/* Day clickable link */
+.calendar td a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    text-decoration: none;
+    color: inherit;
+    font-weight: normal;
+}
+
+/* Highlight today */
+.today {
+    background-color: #b3d9ff;
+    color: black;
+    font-weight: bold;
+    border: 2px solid #0d47a1;
+}
+
+.today a {
+    color: black;
+}
+
+/* Selected day */
+.selected {
+    background-color: #0d47a1 !important;
+    color: white;
+}
+
+.selected a {
+    color: white;
+}
+
+/* Hover effect */
+.calendar td:hover {
+    background-color: #f0f8ff;
+    cursor: pointer;
+}
+
+/* Mood/Note Panel */
+.description {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    flex: 1;
+    min-width: 260px;
+}
+
+.description h3 {
+    margin-top: 0;
+    color: #1565c0;
+    font-size: 1.4rem;
+}
+
+.mood {
+    font-size: 22px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .calendar,
+    .description {
+        width: 100%;
+    }
+
+    .calendar h2 {
+        font-size: 1.4rem;
+    }
+
+    .calendar .nav-arrow {
+        font-size: 1.4rem;
+    }
+}

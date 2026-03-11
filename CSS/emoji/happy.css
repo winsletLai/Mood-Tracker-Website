@@ -1,0 +1,105 @@
+/* happy animated style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.emoji_happy {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#ffda6b, #ff935c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.face_happy {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    animation: face_happy 2s linear infinite;
+}
+
+.eye_happy {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 60px;
+}
+
+.eye_happy span{
+    display: inline-block;
+    margin: 0 12px;
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+    background: #000;
+}
+
+.eye_happy span::after{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+    background: #000;
+    top: 10px;
+    left: 0;
+}
+
+.eye_happy .left{
+    transform: rotate(30deg);
+}
+
+.eye_happy .left::after{
+    transform: rotate(-40deg);
+}
+
+.eye_happy .right{
+    transform: rotate(-30deg);
+}
+
+.eye_happy .right::after{
+    transform: rotate(40deg);
+}
+
+.mouth_happy {
+    position: absolute;
+    width: 90px;
+    height: 60px;
+    left: 50%;
+    top: 110px;
+    transform: translateX(-50%);
+    background: #000;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+    z-index: 1;
+    transform-origin: center top;
+    animation: mouth_happy 1s linear infinite;
+}
+
+.tongue_happy {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    background: #f45;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@keyframes face_happy {
+    25%, 75% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    0%, 100% { transform: translateY(0); }
+}
+
+@keyframes mouth_happy {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.2); }
+}

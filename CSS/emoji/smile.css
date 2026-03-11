@@ -1,0 +1,127 @@
+/*smile animated style*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.emoji_smile {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(#ffda6b, #ff935c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.face_smile {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    animation: face_smile 1s linear infinite alternate;
+}
+
+.eyebrow_smile {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow:
+        -6px 0 0 0 #000,
+        -36px 0 0 0 #000,
+        6px 0 0 0 #000,
+        36px 0 0 0 #000;
+}
+
+.eyebrow_smile::before, .eyebrow_smile::after{
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 18px;
+    border-radius: 60px 60px 0 0;
+    border: 6px solid #000;
+    border-bottom: 0;
+    background: transparent;
+    bottom: 3px;
+    left: calc(50% - 18px);
+    box-sizing: border-box;
+}
+
+.eyebrow_smile::before{
+    margin-left: -21px;
+}
+
+.eyebrow_smile::after{
+    margin-left: 21px;
+}
+
+.mouth_smile{
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    z-index: 1;
+}
+
+.mouth_smile::after{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: calc(50% - 40px);
+    top: -75px;
+    border-radius: 50%;
+    background: transparent;
+    border: 6px solid #000;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.mouth_smile::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: transparent;
+    bottom: 5px;
+    left: calc(50% - 3px);
+    box-shadow:
+        -25px 0 0 0 #000,
+        25px 0 0 0 #000;
+}
+
+.blush_smile{
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    background: rgba(255, 100, 100, 0.6);
+    border-radius: 50%;
+    top: 40px;
+    z-index: 0;
+}
+
+.blush_smile.left{
+    left: 30px;
+}
+
+.blush_smile.right{
+    right: 30px;
+}
+
+@keyframes face_smile {
+    25% { transform: rotate(-15deg); }
+    75% { transform: rotate(15deg); }
+    0%, 100% { transform: rotate(0deg); }
+}

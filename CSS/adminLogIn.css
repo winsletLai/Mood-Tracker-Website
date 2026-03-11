@@ -1,0 +1,149 @@
+ .stackedForm {
+     --form-btn-color-3: #eeeeee;
+     --form-btn-color-2: #e0dede;
+     --form-btn-color-1: #d4cbe2;
+     --form-btn-color: #573b8a;
+     --form-btn-active-color: #6d44b8;
+     --form-rotation: rotate3d(0, 1, 0, 180deg);
+ }
+
+ .stackedForm {
+     transform: var(--form-rotation);
+ }
+
+ .stackedForm .wrapper {
+     position: relative;
+     transform: skewY(-14deg);
+ }
+
+ .stackedForm .wrapper li,
+ .stackedForm button {
+     position: relative;
+     list-style: none;
+     width: 300px;
+     height: 50px;
+     z-index: var(--i);
+     transition: 0.3s;
+     color: white;
+ }
+
+ .stackedForm .wrapper li::before,
+ .stackedForm button::before {
+     position: absolute;
+     content: "";
+     top: 0;
+     left: -50px;
+     width: 50px;
+     height: 50px;
+     transform-origin: right;
+     transform: skewY(45deg);
+     transition: 0.3s;
+ }
+
+ .stackedForm .wrapper li::after,
+ .stackedForm button::after {
+     position: absolute;
+     content: "";
+     width: 300px;
+     height: 50px;
+     top: -50px;
+     left: 0;
+     transform-origin: bottom;
+     transform: skewX(45deg);
+     transition: 0.3s;
+ }
+
+ .stackedForm .wrapper li:nth-child(1)::before,
+ .stackedForm .wrapper li:nth-child(1)::after {
+     background-color: var(--form-btn-color-3);
+ }
+
+ .stackedForm .wrapper li:nth-child(2)::before,
+ .stackedForm .wrapper li:nth-child(2)::after {
+     background-color: var(--form-btn-color-2);
+ }
+
+ .stackedForm .wrapper li:nth-child(3)::before,
+ .stackedForm .wrapper li:nth-child(3)::after,
+ .stackedForm button::before,
+ .stackedForm button::after {
+     background-color: var(--form-btn-color);
+ }
+
+ .stackedForm .input,
+ .stackedForm button {
+     width: 300px;
+     height: 50px;
+     padding: 0 14px;
+     box-sizing: border-box;
+     border: none;
+     outline: none;
+     font-size: 1.2rem;
+ }
+
+ .stackedForm button {
+     background: var(--form-btn-color);
+     color: white;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+ .stackedForm button span {
+     display: block;
+     transform: var(--form-rotation);
+ }
+
+ .stackedForm li .input {
+     transform: var(--form-rotation);
+     color: black;
+ }
+
+ .stackedForm li:nth-child(1) .input {
+     background: var(--form-btn-color-3);
+ }
+
+ .stackedForm li:nth-child(2) .input {
+     background: var(--form-btn-color-2);
+ }
+
+ .stackedForm li .input::placeholder {
+     color: black;
+ }
+
+ .stackedForm .wrapper li:hover,
+ .stackedForm button:hover,
+ .stackedForm .wrapper li:has(input:focus),
+ .stackedForm button:focus {
+     transform: translateX(-20px);
+ }
+
+ .stackedForm button:hover,
+ .stackedForm button:hover::before,
+ .stackedForm button:hover::after,
+ .stackedForm button:focus,
+ .stackedForm button:focus::before,
+ .stackedForm button:focus::after {
+     background: var(--form-btn-active-color);
+ }
+
+ .stackedForm button:active {
+     transform: translateX(0px);
+ }
+
+ body {
+     margin: 0;
+     padding: 0;
+     background: #040303ff;
+     font-family: Arial, sans-serif;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .error {
+     color: red;
+     margin-bottom: 20px;
+     padding: 50px;
+ }
