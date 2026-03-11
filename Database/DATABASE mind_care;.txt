@@ -1,0 +1,34 @@
+CREATE DATABASE mind_care; 
+USE mind_care; 
+CREATE TABLE users 
+(user_id INT AUTO_INCREMENT PRIMARY KEY, 
+unique_id INT NOT NULL UNIQUE, 
+username VARCHAR(255) NOT NULL, 
+email VARCHAR(255) NOT NULL UNIQUE, 
+password VARCHAR(255) NOT NULL, 
+role ENUM('user', 'consultant') NOT NULL DEFAULT 'user', 
+is_approved BOOLEAN DEFAULT FALSE, 
+image VARCHAR(255) DEFAULT 'default.jpg', 
+about_me TEXT DEFAULT NULL, 
+note TEXT DEFAULT NULL, 
+status VARCHAR(255) DEFAULT NULL COMMENT 'e.g. Online, Offline' ); 
+
+CREATE TABLE messages 
+(msg_id INT AUTO_INCREMENT PRIMARY KEY, 
+incoming_msg_id INT NOT NULL, 
+outgoing_msg_id INT NOT NULL, 
+msg TEXT NOT NULL, 
+FOREIGN KEY ( incoming_msg_id) REFERENCES users(unique_id) ON DELETE CASCADE,
+FOREIGN KEY (outgoing_msg_id) REFERENCES users(unique_id) ON DELETE CASCADE ); 
+CREATE TABLE mood_log 
+( mood_id INT AUTO_INCREMENT PRIMARY KEY, 
+user_id INT NOT NULL, 
+mood VARCHAR(255) NOT NULL, 
+comment TEXT, 
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+FOREIGN KEY (user_id) REFERENCES users(unique_id) ON DELETE CASCADE ); 
+CREATE TABLE admin 
+( id INT AUTO_INCREMENT PRIMARY KEY, 
+username VARCHAR(255) NOT NULL UNIQUE, 
+password VARCHAR(255) NOT NULL );
+INSERT INTO admin (username, password) VALUES ('admin21', 'admin21');
